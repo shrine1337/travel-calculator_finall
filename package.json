@@ -1,6 +1,7 @@
 {
-  "name": "my-react-app",
+  "name": "calculator",
   "version": "0.0.0",
+  "homepage":"https://shrine1337.github.io/travel-calculator/",
   "private": true,
   "type": "module",
   "scripts": {
