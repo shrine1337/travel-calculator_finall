@@ -1,3 +1,5 @@
+# Деплой: https://shrine1337.github.io/travel-calculator/
+
 # 🚀 Мой первый курсовой проект
 ## 📝 Описание проекта
 
