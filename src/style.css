@@ -144,15 +144,6 @@ select option {
   color: #ffffff;
 }
 
-select:focus, input:focus {
-  border-color: #76ADC0;
-}
-
-input.invalid {
-  border-color: #fc8181 !important;
-  background: rgba(229, 62, 62, 0.2) !important;
-}
-
 .error-message {
   color: #fc8181;
   font-size: 12px;
@@ -186,10 +177,6 @@ button {
   border: 1px solid #368f69;
 }
 
-#btn-convert:hover {
-  background: #1e523b;
-}
-
 .btn-secondary, #refresh-rates {
   background: #3a4a58;
   border: 1px solid #4a5d6e;
@@ -197,10 +184,6 @@ button {
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 10px;
-}
-
-.btn-secondary:hover, #refresh-rates:hover {
-  background: #2b3742;
 }
 
 .result-display, .result {
@@ -231,8 +214,4 @@ button {
   font-weight: 700;
   color: #ffffff;
   letter-spacing: -0.5px;
-}
-
-.hidden {
-  display: none !important;
 }
