@@ -7,14 +7,67 @@
     <link rel="stylesheet" href="src/reset.css">
     <link rel="stylesheet" href="src/style.css">
     <link rel="icon" href="src/assets/image.png">
+    <script type="module" src="/src/main.js"></script>
     <title>Калькулятор для путешественника</title>
 </head>
 
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Калькулятор для путешественника</h1>
+        <div class="currencies">
+            <div class="header">
+                <h1>Калькулятор для путешественника</h1>
+                <div class="update">
+                    Курсы обновлены: <span id="last-time-updated">date</span>
+                </div>
+
+                <div class="section-box">
+                    <div class="summa-centered">
+                        <span>Сумма</span>
+                        <input type="text" id="calc-amount" class="sum" placeholder="Введите сумму">
+                        <span class="error-message" id="error-amount"></span>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="from-currency">Из валюты</label>
+                            <select id="from-currency">
+                                <option value="USD">USD (Доллар)</option>
+                                <option value="EUR">EUR (Евро)</option>
+                                <option value="CNY">CNY (Юань)</option>
+                                <option value="UAH">UAH (Гривна)</option>
+                                <option value="RUB">RUB (Рубль)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="to-currency">В валюту</label>
+                            <select id="to-currency">
+                                <option value="RUB" selected>RUB (Рубль)</option>
+                                <option value="USD">USD (Доллар)</option>
+                                <option value="EUR">EUR (Евро)</option>
+                                <option value="CNY">CNY (Юань)</option>
+                                <option value="UAH">UAH (Гривна)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="button-centered-wrap">
+                        <button id="btn-convert">Конвертировать</button>
+                    </div>
+
+                    <div id="currency-result" class="result-display">Введите данные</div>
+
+                    <div class="button-centered-wrap">
+                        <button id="btn-update-rates" class="btn-secondary">Обновить курсы</button>
+                    </div>
+                </div>
+
+
+
+            </div>
         </div>
+        <div class="way"></div>
+        <div class="wishlist"></div>
     </div>
 </body>
 
