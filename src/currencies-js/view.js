@@ -2,7 +2,6 @@ export function updateTime(date, timestamp) {
     const updateSpan = document.getElementById('last-time-updated')
     if (updateSpan) {
         const ratesDate = new Date(timestamp)
-        // Исправлено: убрали дублирование текста и добавили индекс [0] к сплиту даты
         updateSpan.innerHTML = `${date.split('T')[0]}<br>
                                 Оф курс ЦБ РФ от: ${ratesDate.toLocaleString()}`
     }
