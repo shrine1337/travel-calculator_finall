@@ -20,6 +20,6 @@ export async function loadRates() {
     }
 }
 
-export function getCurrencyRates() {
-    return currentValues
-}
+    export function getCurrencyRates() {
+        return currentValues
+    }

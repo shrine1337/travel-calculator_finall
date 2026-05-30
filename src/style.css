@@ -1,4 +1,6 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -12,7 +14,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: 'Poppins', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   padding: 20px;
 }
 
@@ -113,6 +115,10 @@ label, .summa-centered span, .summa span {
   opacity: 0.6;
 }
 
+.summa-centered .sum:focus {
+  border-color: #76ADC0;
+}
+
 .form-row {
   display: flex;
   gap: 12px;
@@ -146,6 +152,15 @@ select {
 select option {
   background-color: #2E506E;
   color: #ffffff;
+}
+
+select:focus, input:focus {
+  border-color: #76ADC0;
+}
+
+input.invalid {
+  border-color: #fc8181 !important;
+  background: rgba(229, 62, 62, 0.2) !important;
 }
 
 .error-message {
@@ -201,20 +216,8 @@ button {
   color: #ffffff;
 }
 
-.result-display::before {
-  content: "РЕЗУЛЬТАТ:";
-  display: block;
-  font-size: 11px;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-weight: 600;
-  margin-bottom: 6px;
-  opacity: 0.8;
-}
-
 .table-container {
-  max-height: 390px;
+  max-height: 210px;
   overflow-y: auto;
   width: 100%;
   margin-top: 10px;
@@ -244,16 +247,16 @@ th {
   height: 28px;
   padding: 0 8px;
   font-size: 12px;
-
 }
-@media (max-width: 1300px) {
+
+@media (max-width: 1500px) {
   .container {
     flex-direction: column;
     width: 100%;
     height: auto;
     gap: 20px;
   }
-  .currencies, .way, .wishlist {
+  .currencies, .way, .budget {
     width: 100%;
     max-width: 480px;
     height: auto;
@@ -268,7 +271,7 @@ th {
   .container {
     padding: 0;
   }
-  .currencies, .way, .wishlist {
+  .currencies, .way, .budget {
     padding: 20px 15px;
     border-radius: 8px;
   }
