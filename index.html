@@ -4,18 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/reset.css">
+    <link rel="stylesheet" href="src/reset.css"> <!-- сброс всех стилей -->
     <link rel="stylesheet" href="src/style.css">
     <link rel="icon" href="src/assets/image.png">
     <script type="module" src="/src/main.js"></script>
     <title>Калькулятор для путешественника</title>
-</head>
-
+</head> 
 <body>
     <div class="container">
         <div class="currencies">
             <div class="header">
-                <h1>Калькулятор для путешественника</h1>
+                <h1>Конвертор валют</h1>
                 <div class="update">
                     Курсы обновлены: <span id="last-time-updated">date</span>
                 </div>
@@ -23,7 +22,7 @@
                 <div class="section-box">
                     <div class="summa-centered">
                         <span>Сумма</span>
-                        <input type="text" id="calc-amount" class="sum" placeholder="Введите сумму">
+                        <input type="text" id="calc-amount" class="sum" placeholder="Введите данные">
                         <span class="error-message" id="error-amount"></span>
                     </div>
 
@@ -50,7 +49,6 @@
                             </select>
                         </div>
                     </div>
-
                     <div class="button-centered-wrap">
                         <button id="btn-convert">Конвертировать</button>
                     </div>
@@ -61,13 +59,84 @@
                         <button id="btn-update-rates" class="btn-secondary">Обновить курсы</button>
                     </div>
                 </div>
-
-
-
             </div>
         </div>
-        <div class="way"></div>
-        <div class="wishlist"></div>
+        <div class="way">
+            <div class="header">
+                <h1>Калькулятор пути</h1>
+                <div class="update">Мгновенный перевод величин</div>
+                <div class="section-box-short">
+                    <div class="summa-centered">
+                        <span>Значение</span>
+                        <input type="text" id="unit-value" class="sum" placeholder="Введите данные">
+                        <span class="error-message" id="error-unit"></span>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="unit-type">Тип перевода</label>
+                            <select id="unit-type">
+                                <option value="mile-km">Мили ➔ Километры</option>
+                                <option value="km-mile">Километры ➔ Мили</option>
+                                <option value="lbs-kg">Фунты ➔ Килограммы</option>
+                                <option value="kg-lbs">Килограммы ➔ Фунты</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="unit-result" class="result-display">Введите данные</div>
+                </div>
+            </div>
+        </div>
+        <div class="budget">
+            <div class="header">
+        <h1>Бюджет поездки</h1>
+        <div class="update">Итого: <span id="budget-total">0.00</span> RUB</div>
+        <div class="section-box">
+            <div class="summa-centered">
+                <span>Сумма расхода</span>
+                <input type="text" id="expense-amount" class="sum" placeholder="Введите данные">
+                <span class="error-message" id="error-expense"></span>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="expense-category">Категория</label>
+                    <select id="expense-category">
+                        <option value="🏠︎ Проживание">🏠︎ Проживание</option>
+                        <option value="✈︎ Транспорт">✈︎ Транспорт</option>
+                        <option value="𓌉◯𓇋 Еда">𓌉◯𓇋 Еда</option>
+                        <option value="🍻 Развлечения">🍻 Развлечения</option>
+                        <option value="💭 Другое">💭 Другое</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="expense-currency">Валюта</label>
+                    <select id="expense-currency">
+                        <option value="RUB">RUB</option>
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="CNY">CNY</option>
+                    </select>
+                </div>
+            </div>
+            <div class="button-centered-wrap">
+                <button id="btn-add-expense">Добавить статью</button>
+            </div>
+            <div class="table-container">
+                <table id="budget-table">
+                    <thead>
+                        <tr>
+                            <th>Статья</th>
+                            <th>Итоговая сумма</th>
+                            <th>В рублях</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="budget-tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
     </div>
 </body>
 

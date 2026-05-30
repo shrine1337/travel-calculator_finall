@@ -1,6 +1,4 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -14,33 +12,30 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: 'Poppins', sans-serif;
   padding: 20px;
 }
 
 .container {
   display: flex;
-  width: 1720px;
-  height: 880px;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: auto;
   margin-top: 25px;
   padding: 20px;
 }
 
-.currencies, .way, .wishlist {
+.currencies, .way, .budget {
   background: linear-gradient(0deg, #2E506E, #76ADC0);
-  width: 570px;
+  width: 480px;
   height: 800px;
   border-radius: 10px;
   padding: 35px 25px 25px 25px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
-
-.way {
-  margin-left: 40px;
-  margin-right: 40px;
 }
 
 h1 {
@@ -57,7 +52,7 @@ h1 {
   text-align: center;
   color: #e2f1f6;
   line-height: 1.5;
-  margin-bottom: 5px;
+  margin-bottom: 25px;
 }
 
 .section-box {
@@ -71,13 +66,22 @@ h1 {
   justify-content: space-between;
 }
 
+.section-box-short {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: auto;
+}
+
 .summa-centered {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
   width: 100%;
-  margin-top: 10px;
 }
 
 label, .summa-centered span, .summa span {
@@ -144,15 +148,6 @@ select option {
   color: #ffffff;
 }
 
-select:focus, input:focus {
-  border-color: #76ADC0;
-}
-
-input.invalid {
-  border-color: #fc8181 !important;
-  background: rgba(229, 62, 62, 0.2) !important;
-}
-
 .error-message {
   color: #fc8181;
   font-size: 12px;
@@ -181,29 +176,21 @@ button {
   align-items: center;
 }
 
-#btn-convert {
+#btn-convert, #btn-add-expense {
   background: #2a6f51;
   border: 1px solid #368f69;
 }
 
-#btn-convert:hover {
-  background: #1e523b;
-}
-
-.btn-secondary, #refresh-rates {
+.btn-secondary {
   background: #3a4a58;
   border: 1px solid #4a5d6e;
   height: 46px;
   font-size: 14px;
   font-weight: 500;
-  margin-bottom: 10px;
+  margin-top: 15px;
 }
 
-.btn-secondary:hover, #refresh-rates:hover {
-  background: #2b3742;
-}
-
-.result-display, .result {
+.result-display {
   background: rgba(255, 255, 255, 0.15);
   padding: 25px 20px;
   border-radius: 12px;
@@ -214,7 +201,7 @@ button {
   color: #ffffff;
 }
 
-.result-display::before, .result span {
+.result-display::before {
   content: "РЕЗУЛЬТАТ:";
   display: block;
   font-size: 11px;
@@ -226,13 +213,70 @@ button {
   opacity: 0.8;
 }
 
-.res {
-  font-size: 26px;
-  font-weight: 700;
-  color: #ffffff;
-  letter-spacing: -0.5px;
+.table-container {
+  max-height: 390px;
+  overflow-y: auto;
+  width: 100%;
+  margin-top: 10px;
 }
 
-.hidden {
-  display: none !important;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+th {
+  font-weight: 600;
+  color: #a3c4d9;
+}
+
+.btn-delete {
+  background: #8c2d38;
+  width: auto;
+  height: 28px;
+  padding: 0 8px;
+  font-size: 12px;
+
+}
+@media (max-width: 1300px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+  }
+  .currencies, .way, .wishlist {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    min-height: 720px;
+  }
+}
+
+@media (max-width: 520px) {
+  body {
+    padding: 10px;
+  }
+  .container {
+    padding: 0;
+  }
+  .currencies, .way, .wishlist {
+    padding: 20px 15px;
+    border-radius: 8px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
 }

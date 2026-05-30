@@ -1,8 +1,8 @@
-let currentValues = { RUB: 1 }
+let currentValues = {}
 
 export async function loadRates() {
     try {
-        const response = await fetch('https://cbr-xml-daily.ru')
+        const response = await fetch('https://www.cbr-xml-daily.ru/daily_json.js')
         const data = await response.json()
         
         currentValues = {
