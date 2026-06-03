@@ -18,7 +18,7 @@ cd travel-calculator
 npm install
 ```
 
-### 3. Запуск в режиме разработки
+### 3. Запуск
 ```bash
 npm run dev
 ```
