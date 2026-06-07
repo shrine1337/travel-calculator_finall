@@ -1,3 +1,27 @@
+export function updateTime(date, timestamp) {
+    const updateSpan = document.getElementById('last-time-updated')
+    if (updateSpan) {
+        const ratesDate = new Date(timestamp)
+        const cleanDate = date.includes('T') ? date.split('T')[0] : date
+        updateSpan.innerHTML = `Курсы обновлены: ${cleanDate}<br>
+                                Оф курс ЦБ РФ от: ${ratesDate.toLocaleString()}`
+    }
+}
+
+export function showResultCurrencie(text) {
+    const resultDiv = document.getElementById('currency-result')
+    if (resultDiv) {
+        resultDiv.textContent = text
+    }
+}
+
+export function showResultWay(text) {
+    const div = document.getElementById('unit-result')
+    if (div) {
+        div.textContent = text
+    }
+}
+
 export function renderBudget(expenses, rates) {
     const tbody = document.getElementById('budget-tbody')
     const totalSpan = document.getElementById('budget-total')
