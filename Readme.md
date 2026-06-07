@@ -9,8 +9,8 @@
 
 ### 1. Клонирование репозитория
 ```bash
-git clone git@github.com:shrine1337/travel-calculator.git
-cd travel-calculator
+git clone git@github.com:shrine1337/travel-calculator_finall.git
+cd travel-calculator_final
 ```
 
 ### 2. Установка зависимостей
