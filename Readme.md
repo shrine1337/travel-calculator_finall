@@ -1,4 +1,4 @@
-# Деплой: https://shrine1337.github.io/travel-calculator/
+# Деплой: https://shrine1337.github.io/travel-calculator_finall/
 
 ##  Описание проекта
 
