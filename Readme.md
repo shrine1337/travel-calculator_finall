@@ -10,15 +10,17 @@
 ### 1. Клонирование репозитория
 ```bash
 git clone git@github.com:shrine1337/travel-calculator_finall.git
+```
+### 2. Переход в папку
+```bash
 cd travel-calculator_finall
 ```
-
-### 2. Установка зависимостей
+### 3. Установка зависимостей
 ```bash
 npm install
 ```
 
-### 3. Запуск
+### 4. Запуск
 ```bash
 npm run dev
 ```
